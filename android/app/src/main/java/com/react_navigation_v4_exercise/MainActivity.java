@@ -1,4 +1,4 @@
-package com.testproject_1;
+package com.react_navigation_v4_exercise;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "TestProject_1";
+    return "react_navigation_v4_exercise";
   }
 }

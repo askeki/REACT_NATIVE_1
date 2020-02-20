@@ -1,4 +1,4 @@
-package com.testproject_1;
+package com.react_navigation_v4_exercise;
 
 import android.app.Application;
 import android.content.Context;

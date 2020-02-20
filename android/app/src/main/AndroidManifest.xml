@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.testproject_1">
+  package="com.react_navigation_v4_exercise">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
