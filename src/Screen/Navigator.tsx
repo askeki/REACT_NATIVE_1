@@ -1,9 +1,6 @@
 import {createSwitchNavigator, createAppContainer} from 'react-navigation';
-import {
-  createBottomTabNavigator,
-  createMaterialTopTabNavigator,
-} from 'react-navigation-tabs';
-import {createStackNavigator} from 'react-navigation-stack';
+import { createBottomTabNavigator, createMaterialTopTabNavigator, } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import AuthLoading from './AuthLoading';
 import Auth from './Auth';
@@ -19,15 +16,25 @@ import ThirdTab from './ThirdTab';
 
 import Detail from './Detail';
 
+import MainScreen from './MainScreen';
+import { Text } from 'react-native';
+
 const TopTab = createMaterialTopTabNavigator({
-  TopTabFirst,
+  '가계부': {
+    screen: TopTabFirst
+  },
   TopTabSecond,
-  TopTabThird,
+  TopTabThird, 
 });
 
 const FirstTabStack = createStackNavigator({
-  TopTab,
-  Detail,
+  MainTab: {
+    screen: TopTab,
+    navigationOptions: ({navigation}) => ({
+      headerTitle: '나라인포', 
+    }),
+  },
+  Detail
 });
 
 const MainTab = createBottomTabNavigator({
@@ -40,10 +47,10 @@ const MainNavi = createStackNavigator({
   MainTab: {
     screen: MainTab,
     navigationOptions: ({navigation}) => ({
-      header: null,
+      header: null
     }),
-  },
-  FullDetail,
+  }, 
+  FullDetail
 });
 
 export default createAppContainer(
@@ -51,10 +58,10 @@ export default createAppContainer(
     {
       AuthLoading,
       Auth,
-      MainNavi,
+      MainNavi
     },
     {
-      initialRouteName: 'AuthLoading',
+      initialRouteName: 'MainNavi',
     },
   ),
 );

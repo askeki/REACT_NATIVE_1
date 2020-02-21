@@ -24,9 +24,10 @@ const TopTapFirst = ({navigation}: Props) => {
   };
 
   const _logout = (): void => {
-    AsyncStorage.removeItem('userToken');
+    AsyncStorage.removeItem('member');
     navigation.navigate('Auth');
   };
+
   const _navigateSecondBottomTab = (): void => {
     navigation.navigate('SecondTab');
   };
