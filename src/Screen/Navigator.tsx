@@ -8,6 +8,7 @@ import Auth from './Auth';
 import FullDetail from './FullDetail';
 
 import TopTabFirst from './TopTabFirst';
+import listView from './listView';
 import TopTabSecond from './TopTabSecond';
 import TopTabThird from './TopTabThird';
 
@@ -16,12 +17,9 @@ import ThirdTab from './ThirdTab';
 
 import Detail from './Detail';
 
-import MainScreen from './MainScreen';
-import { Text } from 'react-native';
-
 const TopTab = createMaterialTopTabNavigator({
-  '가계부': {
-    screen: TopTabFirst
+  '리스트': {
+    screen: listView
   },
   TopTabSecond,
   TopTabThird, 
